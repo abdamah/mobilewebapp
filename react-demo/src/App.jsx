@@ -8,6 +8,13 @@ import { Body } from "./components/Body";
 import { useState } from "react";
 
 const App = () => {
+  /* State: is used to control and manage ui components
+   *  states contains getter and setter
+   * const [name, setName] = useState('')
+   * Here name is getter while setName is setter.
+   * name: is a simple variable that contains initial values ''
+   * setName is a function that update and handle interactivity of component
+   */
   const [count, setCount] = useState(0);
 
   // This is will render if count is greather than 3.

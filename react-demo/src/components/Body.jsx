@@ -2,4 +2,4 @@
 
 const Body = () => <p>Body Section with single return statement</p>;
 
-export { Body }; // We can export multiple normal component
+export { Body }; // We can export multiple normal component , this is ony for normal export
