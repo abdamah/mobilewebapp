@@ -4,6 +4,7 @@
  *  2. index.tsx: which is used to rendere 'home/index'
  */
 
+import { Link } from "expo-router";
 import { useState } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 
@@ -15,13 +16,22 @@ const HomePage = () => {
     <View style={qurxin.con}>
       {/**qurxin: is Style Sheet object */}
       {/**View: is used to create a container as div in blain HTML */}
-      <Text style={qurxin.txt}>Hello World</Text>{" "}
+      <Text style={qurxin.txt}>Hello World</Text>
       {/** Text is a component used to display any 'string' text on UI */}
       {/** Here count is state variable used to render its value in {} */}
       <Text style={qurxin.txt}>{count}</Text>
       {/** {}: are used to render dynamic content on JSX or TSX */}
       <Button onPress={() => setCount(count + 1)} title="Increment" />
       <Button onPress={() => setCount(count - 1)} title="Decrement" />
+      {/**Link to about route/ about screen */}
+      <Link href={"/about/about"}>
+        <Text>Goto about screen</Text>
+      </Link>
+
+      {/**Route Group link */}
+      <Link href={"/login"}>
+        <Text>Login Screen</Text>
+      </Link>
     </View>
   );
 };
